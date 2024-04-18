@@ -1,0 +1,21 @@
+.title{
+  text-align: center;
+}
+.row{
+  display: flex;
+}
+body{
+  background-color: gray;
+}
+.cell{
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+  text-align: center;
+  align-content: center;
+}
+.body{
+  text-align: center;
+  align-content: center;
+}
