@@ -7,15 +7,20 @@
 body{
   background-color: gray;
 }
+.tic-tok-toe{
+  margin: 0 auto;
+  text-align: center;
+  width: 210px;
+}
+h1{
+  color: aqua;
+  text-shadow:1cm;
+}
 .cell{
   border: 1px solid black;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   background-color: aqua;
-  text-align: center;
-  align-content: center;
-}
-.body{
   text-align: center;
   align-content: center;
 }

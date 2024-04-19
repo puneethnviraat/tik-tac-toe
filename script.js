@@ -43,9 +43,13 @@ function addListner() {
   });
 }
 function getWinner() {
+  let diagonalValues = [];
+  let revDiagonalValues = [];
+
   for (let i = 0; i < game.length; i++) {
     //row values
-    if (game[i].length > 2) {
+    if (game[i].includes(undefined)) {
+    } else {
       if (checkLine(game[i])) {
         return true;
       }
@@ -59,12 +63,25 @@ function getWinner() {
       }
     }
   }
+  for (let i = 0; i < game.length; i++) {
+    for (let j = 0; j < game.length; j++) {
+      if (i == j) {
+        diagonalValues.push(game[i][j]);
+      }
+    }
+    if (checkLine(diagonalValues)) {
+      return true;
+    }
+    revDiagonalValues.push(game[i][game.length - i - 1]);
+    if (checkLine(revDiagonalValues)) {
+      return true;
+    }
+  }
 }
 
 function checkLine(arr) {
   if (arr.length == 3) {
     let result = arr.every((data) => arr[0] === data && data !== undefined);
-    console.log(result);
     return result;
   }
 }
