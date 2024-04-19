@@ -92,7 +92,8 @@ function updateGameData(row, col, value) {
   }
   game[row][col] = value;
   if (getWinner()) {
-    alert('name=' + currentPlayer);
+    // alert('name=' + currentPlayer);
+    Alert.render('hi' + currentPlayer + 'you won this.. haha!!!');
   }
 }
 createBoard();
